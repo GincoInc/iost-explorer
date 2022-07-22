@@ -58,6 +58,10 @@ make docker-build
 docker-compose up
 ```
 
+```bash
+open http://localhost:8080
+```
+
 ## Contribution
 
 Contribution of any forms is appreciated!
