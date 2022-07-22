@@ -29,7 +29,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://localhost:8088',
+        target: 'http://host.docker.internal:8088',
         changeOrigin: true,
         secure: false
         }
