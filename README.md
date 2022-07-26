@@ -62,6 +62,27 @@ docker-compose up
 open http://localhost:8080
 ```
 
+### Create Mongo Index (reference: https://github.com/GincoInc/iost-explorer/blob/master/backend/config/mongoIndex.js)
+```bash
+kubectl iexec iost-testnet-1 -c mongo
+mongosh
+# use explorer
+# db.txs.createIndex({"tx.hash":1},{ unique: true })
+# db.txs.createIndex({"tx.time":1})
+# db.txs.createIndex({"blocknumber":1})
+# db.blocks.createIndex({"number":1},{ unique: true })
+# db.blocks.createIndex({"hash":1},{ unique: true })
+# db.accounts.createIndex({"accountInfo.balance":1})
+# db.accounts.createIndex({"name":1},{ unique: true })
+# db.accountTx.createIndex({"name":1, "time":-1})
+# db.contracts.createIndex({"id":1})
+# db.contractTx.createIndex({"id":1, "time":-1})<Paste>
+```
+
+```bash
+open http://localhost:8080
+```
+
 ## Contribution
 
 Contribution of any forms is appreciated!
